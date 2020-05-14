@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+        <!--            per test logback con layout testo-->
+<!--                    <layout class="LogbackTextLayout">-->
+<!--                    </layout>-->
+
+        <!--            oppure per il test con layout json -->
+        <layout class="it.giuseppesgambato.logging.extensions.layouts.logback.LogbackJsonLayout">
+        </layout>
+    </encoder>
+</appender>
+
+<root level="INFO">
+    <appender-ref ref="STDOUT" />
+</root>
+</configuration>
